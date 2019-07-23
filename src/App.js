@@ -12,7 +12,6 @@ const clickys = [
     {id: 6},
     {id: 7},
     {id: 8},
-    {id: 9},
 ];
 
 class App extends React.Component {

@@ -5,7 +5,7 @@ import Clicky from '../Clicky/Clicky';
 class Main extends React.Component {
     render() {
         return (
-            <div className="container d-flex flex-wrap">
+            <div className="container d-flex flex-wrap justify-content-center">
                 {this.props.clickys.map(clicky => {
                     return <Clicky key={clicky.id} clicky={clicky}/>
                 })}
