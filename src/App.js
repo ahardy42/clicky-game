@@ -1,6 +1,8 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav/Nav';
+import Entry from './components/Entry/Entry';
 import Main from './components/Main/Main';
 import clickys from './clickys.json';
 
@@ -16,6 +18,8 @@ class App extends React.Component {
         this.setHighScore = this.setHighScore.bind(this);
         this.setRandomPosition = this.setRandomPosition.bind(this);
         this.gameOver = this.gameOver.bind(this);
+        this.mainPage = this.mainPage.bind(this);
+        this.entryPage = this.entryPage.bind(this);
     }
     setScore() {
         this.setState((prevState, props) => {
@@ -53,10 +57,21 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <Nav score={this.state.score} highScore={this.state.highScore}/>
-                <Main clickys={this.state.clickys} setScore={this.setScore} gameOver={this.gameOver}/>
+                <Router>
+                    <Nav score={this.state.score} highScore={this.state.highScore} />
+                    <Switch>
+                        <Route exact path="/" render={this.entryPage} />
+                        <Route exact path="/game" render={this.mainPage} />
+                    </Switch>
+                </Router>
             </>
         )
+    }
+    mainPage(props) {
+        return <Main clickys={this.state.clickys} setScore={this.setScore} gameOver={this.gameOver} {...props}/>
+    }
+    entryPage(props) {
+        return <Entry {...props} />
     }
 }
 
