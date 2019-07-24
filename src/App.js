@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav';
 import Main from './components/Main/Main';
-import Modal from './components/Main/Modal';
 import clickys from './clickys.json';
 
 class App extends React.Component {

@@ -23,9 +23,9 @@ class Clicky extends React.Component {
     render() {
         return (
             <div className="card bg-dark text-white animated bounce" onClick={this.handleClick}>
-                <img className="card-img" src="http://via.placeholder.com/360x360" alt="Clicky" />
+                <img className="card-img" src={this.props.clicky.img || "http://via.placeholder.com/360x360"} alt="Clicky" />
                 <div className="card-img-overlay">
-                    <h5 class="card-title">{this.props.clicky.name}</h5>
+                    <h5 className="card-title">{this.props.clicky.name}</h5>
                 </div>
             </div>
         );

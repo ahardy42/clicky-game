@@ -3,56 +3,56 @@
         "id": "1",
         "name": "Luke SkyWalker",
         "color": "green",
-        "img": "",
+        "img": "./images/Skywalker-Luke.png",
         "position": 0
     },
     {
         "id": "2",
         "name": "Han Solo",
         "color": "gray",
-        "img": "",
+        "img": "./images/Han-Solo.png",
         "position": 1
     },
     {
         "id": "3",
         "name": "Yoda",
         "color": "green",
-        "img": "",
+        "img": "./images/Yoda.png",
         "position": 2
     },
     {
         "id": "4",
         "name": "Darth Vader",
         "color": "red",
-        "img": "",
+        "img": "./images/Star-Wars-Vader.png",
         "position": 3
     },
     {
         "id": "5",
-        "name": "The Emporer",
+        "name": "The Emperor",
         "color": "red",
-        "img": "",
+        "img": "./images/The-Real-Empire.png",
         "position": 4
     },
     {
         "id": "6",
         "name": "Princess Leia",
         "color": "green",
-        "img": "",
+        "img": "./images/Leia.png",
         "position": 5
     },
     {
         "id": "7",
         "name": "C3PO",
         "color": "green",
-        "img": "",
+        "img": "./images/C3P3.png",
         "position": 6
     },
     {
         "id": "8",
         "name": "R2D2",
         "color": "green",
-        "img": "",
+        "img": "./images/Star-Wars-R2D2.png",
         "position": 7
     }
 ]
