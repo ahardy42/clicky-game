@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import Entry from './components/Entry/Entry';
 import Main from './components/Main/Main';
 import clickys from './clickys.json';
+import {classHelpers as css} from './utility/classHelpers';
 
 class App extends React.Component {
     constructor(props) {
@@ -23,8 +24,9 @@ class App extends React.Component {
     }
     setScore() {
         this.setState((prevState, props) => {
-            this.setRandomPosition();
             return {score: prevState.score + 1}
+        }, () => {
+            this.setRandomPosition();
         });
     }
     setHighScore() {
