@@ -7,9 +7,9 @@ class Clicky extends React.Component {
         super(props);
         this.state = {
             isClicked: false,
-            className: "card bg-dark text-white animated"
+            className: "card text-white animated",
+            style: {backgroundColor: this.props.clicky.color}
         }
-        this.handleClick = this.handleClick.bind(this);
         this.gameOver = this.gameOver.bind(this);
         this.setScore = this.setScore.bind(this);
         this.animationClick = this.animationClick.bind(this);
@@ -26,9 +26,9 @@ class Clicky extends React.Component {
                 let isClicked = this.state.isClicked;
                 isClicked ? this.setScore() : this.gameOver();
                 this.setState({
-                    className: "card bg-dark text-white animated"
+                    className: "card text-white animated"
                 })
-            }, 1000);
+            }, 1100);
         });
     }
     gameOver() {
@@ -39,10 +39,9 @@ class Clicky extends React.Component {
     }
     render() {
         return (
-            <div className={this.state.className} onClick={this.animationClick}>
+            <div className={this.state.className} onClick={this.animationClick} style={this.state.style}>
                 <img className="card-img" src={this.props.clicky.img || "http://via.placeholder.com/360x360"} alt="Clicky" />
                 <div className="card-img-overlay">
-                    <h5 className="card-title">{this.props.clicky.name}</h5>
                 </div>
             </div>
         );
