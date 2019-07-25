@@ -1,21 +1,17 @@
 export const classHelpers = {
-    correctAnswer(className) {
-        // add the tada class to the clicky
-        let updatedClassName = className.concat(" tada");
+    addAnimation(className, addedClass) {
+        // add the tada class to the clicky className array
+        let updatedClassName = className;
+        updatedClassName.push(addedClass);
         return updatedClassName;
     },
-    incorrectAnswer(className) {
-        // add the shake class to the clicky
-        let updatedClassName = className.concat(" shake");
-        return updatedClassName;
-    },
-    removeAnimation(className, animation) {
-        // remove the animation from the className string
-        let updatedClassName = new Promise((resolve, reject) => {
-            setTimeout( () => {
-                resolve(className.split(" ").filter(el => el !== animation).join(" "));
-            }, 2000);
-        }) 
+    removeAnimation(className, array) {
+        // remove the animation from the className array
+        let updatedClassName = className;
+        let len = array.length;
+        for (let i = 0; i < len; i++) {
+            updatedClassName.pop();
+        }
         return updatedClassName;
     }
 }
