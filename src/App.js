@@ -13,7 +13,8 @@ class App extends React.Component {
         this.state = {
             clickys: clickys,
             score: 0,
-            highScore: 0
+            highScore: 0,
+            scoreClassNames: ["nav-item", "text-success", "animated"]
         }
         this.setScore = this.setScore.bind(this);
         this.setHighScore = this.setHighScore.bind(this);
@@ -21,6 +22,14 @@ class App extends React.Component {
         this.gameOver = this.gameOver.bind(this);
         this.mainPage = this.mainPage.bind(this);
         this.entryPage = this.entryPage.bind(this);
+        this.animateScore = this.animateScore.bind(this);
+        this.resetScoreAnimation = this.resetScoreAnimation.bind(this);
+    }
+    animateScore() {
+        css.addAnimation(this.state.scoreClassNames, "rubberBand")
+    }
+    resetScoreAnimation() {
+        css.removeAnimation(this.state.scoreClassNames, ["rubberBand"]);
     }
     setScore() {
         this.setState((prevState, props) => {
@@ -60,7 +69,7 @@ class App extends React.Component {
         return (
             <>
                 <Router>
-                    <Nav score={this.state.score} highScore={this.state.highScore} />
+                    <Nav score={this.state.score} highScore={this.state.highScore} scoreClassNames={this.state.scoreClassNames}/>
                     <Switch>
                         <Route exact path="/" render={this.entryPage} />
                         <Route exact path="/game" render={this.mainPage} />
