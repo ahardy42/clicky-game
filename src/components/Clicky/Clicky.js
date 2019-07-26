@@ -18,11 +18,11 @@ class Clicky extends React.Component {
     animationClick() {
         this.setState((prevState) => {
             if (prevState.isClicked) {
-                return { isClicked: false, className: css.addAnimation(prevState.className, "shake") }
+                return { isClicked: false, className: css.addAnimation(prevState.className, ["shake"]) }
             } else {
-                return { isClicked: true, className: css.addAnimation(prevState.className, "tada") }
+                return { isClicked: true, className: css.addAnimation(prevState.className, ["tada"]) }
             }
-        })
+        });
     }
     animationEnd(event) {
         let name = event.animationName;
@@ -33,6 +33,7 @@ class Clicky extends React.Component {
             }, () => {
                 let isClicked = this.state.isClicked;
                 isClicked ? this.setScore() : this.gameOver();
+                this.props.animateScore();
             });
         } else {
             // if this is just the result of initial animation don't run the setScore or gameOver functions
@@ -45,7 +46,7 @@ class Clicky extends React.Component {
         return this.props.gameOver();
     }
     setScore() {
-        return this.props.setScore();
+        this.props.setScore();
     }
     render() {
         return (

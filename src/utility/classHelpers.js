@@ -1,17 +1,17 @@
 export const classHelpers = {
-    addAnimation(className, addedClass) {
+    addAnimation(className, array) {
         // add the animation class to the clicky className array
         let updatedClassName = className;
-        updatedClassName.push(addedClass);
+        array.forEach(element => {
+            updatedClassName.push(element);
+        });
         return updatedClassName;
     },
     removeAnimation(className, array) {
         // remove the animation from the className array
-        let updatedClassName = className;
-        let len = array.length;
-        for (let i = 0; i < len; i++) {
-            updatedClassName.pop();
-        }
+        let updatedClassName = className.filter(element => {
+            return !array.includes(element);
+        })
         return updatedClassName;
     }
 }
