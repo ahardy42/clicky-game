@@ -51,7 +51,7 @@ class Clicky extends React.Component {
     render() {
         return (
             <div className={this.state.className.join(" ")} onClick={this.animationClick} style={this.state.style} onAnimationEnd={this.animationEnd}>
-                <img className="card-img" src={this.props.clicky.img || "http://via.placeholder.com/360x360"} alt="Clicky" />
+                <img className="card-img" src={this.props.clicky.img} alt="Clicky" />
                 <div className="card-img-overlay">
                 </div>
             </div>
