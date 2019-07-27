@@ -7,7 +7,7 @@ class Main extends React.Component {
         return (
             <div className="container d-flex flex-wrap justify-content-center">
                 {this.props.clickys.map(clicky => {
-                    return <Clicky key={clicky.id} clicky={clicky} setScore={this.props.setScore} gameOver={this.props.gameOver}/>
+                    return <Clicky key={clicky.id} clicky={clicky} setScore={this.props.setScore} animateScore={this.props.animateScore} gameOver={this.props.gameOver} />
                 })}
             </div>
         );

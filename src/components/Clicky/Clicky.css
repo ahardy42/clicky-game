@@ -1,4 +1,37 @@
 .card {
-    width: 300px;
+    height: 20%;
     margin: 0.5em;
+}
+
+/* clicky animation delays */
+.showClicky_1 {
+    animation-delay: 100ms
+}
+
+.showClicky_2 {
+    animation-delay: 500ms
+}
+
+.showClicky_3 {
+    animation-delay: 1000ms
+}
+
+.showClicky_4 {
+    animation-delay: 200ms
+}
+
+.showClicky_5 {
+    animation-delay: 300ms
+}
+
+.showClicky_6 {
+    animation-delay: 600ms
+}
+
+.showClicky_7 {
+    animation-delay: 800ms
+}
+
+.showClicky_8 {
+    animation-delay: 50ms
 }
