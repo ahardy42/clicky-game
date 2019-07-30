@@ -1,0 +1,21 @@
+.instructions {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.instructions-title, h5 {
+    margin-bottom: 20px;
+    color: rgb(243,211,3);
+    max-height: 20%;
+}
+
+.instructions-text {
+    text-align: justify;
+    color: rgb(243,211,3);
+    max-height: 80%;
+}
+.show-button-always {
+    color: black;
+    background-color: rgb(243,211,3);
+    border: none;
+}

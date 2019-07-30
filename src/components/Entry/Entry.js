@@ -21,6 +21,7 @@ class Entry extends React.Component {
                     </div>
                 </div>
                 <Link to="/game" className="btn show-button">Play the Game!</Link>
+                <Link to="/instructions" className="btn show-button-instructions">instructions!</Link>
             </>
         );
     }

@@ -44,6 +44,20 @@ h5 {
     animation-delay: 20s;
 }
 
+.show-button-instructions {
+    opacity: 0;
+    top: 60%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    color: black;
+    background-color: rgb(243,211,3);
+    border: none;
+    position: absolute;
+    animation: showButton 10s linear both;
+    animation-delay: 20s;
+}
+
 @keyframes showButton {
     0% {
         opacity: 0;

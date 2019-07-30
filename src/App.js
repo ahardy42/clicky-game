@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav/Nav';
 import Entry from './components/Entry/Entry';
+import Instructions from './components/Instructions/Instructions';
 import Main from './components/Main/Main';
 import clickys from './clickys.json';
 import {classHelpers as css} from './utility/classHelpers';
@@ -73,6 +74,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/" render={this.entryPage} />
                         <Route exact path="/game" render={this.mainPage} />
+                        <Route exact path="/instructions" render={this.instructionsPage} />
                     </Switch>
                 </Router>
             </>
@@ -83,6 +85,9 @@ class App extends React.Component {
     }
     entryPage(props) {
         return <Entry {...props} />
+    }
+    instructionsPage(props) {
+        return <Instructions {...props} />
     }
 }
 
