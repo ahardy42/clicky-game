@@ -1,25 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { classHelpers as css } from '../../utility/classHelpers';
 import './Entry.css';
 
 class Entry extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            divClassName: ["container", "star-wars"],
-            buttonClassName: ["btn", "btn-primary", "show-button"]
-        }
-    }
-    hideCrawl = (event) => {
-        this.setState(prevState => {
-            return { className: css.addAnimation(prevState.divClassName, ["hide-crawl"]) }
-        });
-    }
     render() {
         return (
             <>
-                <div className={this.state.divClassName.join(" ")} onAnimationEnd={this.hideCrawl}>
+                <div className="container star-wars">
                     <div className="fade"></div>
                     <div className="crawl">
                         <h5 className="title text-center">Star Wars Clicky Game</h5>
@@ -33,7 +20,7 @@ class Entry extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Link to="/game" className={this.state.buttonClassName.join(" ")}>Play the Game!</Link>
+                <Link to="/game" className="btn show-button">Play the Game!</Link>
             </>
         );
     }
