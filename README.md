@@ -1,3 +1,13 @@
+## what this app is
+
+This is a memory game app, created using react.  The object of the game is to click on each of the pictures once. If you click on a picture twice, you must start over.  After clicking, the picture order gets scrambled and you start over.
+
+## how to install on your machine
+
+1. clone this repo
+2. cd into your cloned repo folder and run ```npm i```
+3. run ```npm start``` and away you go!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
