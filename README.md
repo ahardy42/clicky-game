@@ -2,6 +2,16 @@
 
 This is a memory game app, created using react.  The object of the game is to click on each of the pictures once. If you click on a picture twice, you must start over.  After clicking, the picture order gets scrambled and you start over.
 
+## screen shots
+
+![instructions](https://ahardy42.s3.us-east-2.amazonaws.com/project_screenShots/clicky_intro.png)
+
+instructions screen... they scroll!
+
+![main screen](https://ahardy42.s3.us-east-2.amazonaws.com/project_screenShots/clicky_main.png)
+
+game play screen
+
 ## how to install on your machine
 
 1. clone this repo
